@@ -6,7 +6,8 @@ module DropboxApi
     def initialize(client_id, client_secret)
       super(client_id, client_secret, {
         authorize_url: 'https://www.dropbox.com/oauth2/authorize',
-        token_url: 'https://api.dropboxapi.com/oauth2/token'
+        token_url: 'https://api.dropboxapi.com/oauth2/token',
+        auth_scheme: :request_body
       })
     end
   end
